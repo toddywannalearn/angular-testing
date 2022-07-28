@@ -1,0 +1,61 @@
+
+
+@mixin box-shadow($color, $border) {
+    box-shadow: 2px 2px 4px -2px $color;
+    border: $border;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 5px 5px 5px;
+
+    p {
+        padding-right: 40px;
+        padding-left: 40px;
+        font-size: 24px;
+        text-align: center;   
+        font-weight: bold;
+    }
+}
+
+.container__input {
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 40px;
+    text-align: center;
+    font-weight: bold;
+    background-color: plum;
+}
+
+.container__btn {
+    font-size: 24px;
+    font-weight: bold;
+    width: 45px;
+    height: 45px;
+    @include box-shadow(rgba(0,0,0,0.6), 0)    
+}
+
+.container__btn--add {
+    background-color: lightgreen;
+}
+
+.container__btn--minus {
+    background-color: lightcoral;
+}
+
+.container__btn--reset {
+    width: 110px;
+    padding: 5px 5px 5px 5px;
+    background-color: lightblue;
+}
+
+.margin-top {
+    margin-top: 40px;
+}

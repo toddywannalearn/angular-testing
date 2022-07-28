@@ -1,0 +1,21 @@
+<h2>Counter</h2>
+
+<div class="container">
+  <button class="container__btn container__btn--add" (click)="increment()">
+    +
+  </button>
+
+  <p>{{ currentValue }}</p>
+
+  <button class="container__btn container__btn--minus" (click)="decrement()">
+    -
+  </button>
+</div>
+
+<div class="container margin-top">
+  <input class="container__input" role="textbox" aria-label="Insert a value to reset" type="number" #inputVar/>
+
+  <button class="container__btn container__btn--reset" (click)="reset(inputVar.value)">
+    reset
+  </button>
+</div>
