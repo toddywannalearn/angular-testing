@@ -24,9 +24,9 @@ export class CounterComponent {
     this.notify();
   }
 
-  reset(inputValue: any): void {
-    let value = parseInt(inputValue);
-    if(value != null){
+  reset(inputValue: string): void {
+    const value = parseInt(inputValue);
+    if(value){
       this.currentValue = value; 
       this.notify();
     }

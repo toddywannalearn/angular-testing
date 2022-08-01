@@ -5,15 +5,19 @@
     border: $border;
 }
 
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 h2 {
     text-align: center;
 }
 
 .container {
-    display: flex;
+    @extend .flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     margin: 5px 5px 5px 5px;
 
     p {
@@ -39,7 +43,11 @@ h2 {
     font-weight: bold;
     width: 45px;
     height: 45px;
-    @include box-shadow(rgba(0,0,0,0.6), 0)    
+    @include box-shadow(rgba(0,0,0,0.6), 0);
+
+    &:hover{
+        opacity: 0.7;
+    }
 }
 
 .container__btn--add {

@@ -1,21 +1,21 @@
 <h2>Counter</h2>
 
 <div class="container">
-  <button class="container__btn container__btn--add" (click)="increment()">
+  <button class="container__btn container__btn--add" data-testid="increment-btn" (click)="increment()">
     +
   </button>
 
-  <p>{{ currentValue }}</p>
+  <p data-testid="counter-value">{{ currentValue }}</p>
 
-  <button class="container__btn container__btn--minus" (click)="decrement()">
+  <button class="container__btn container__btn--minus" data-testid="decrement-btn" (click)="decrement()">
     -
   </button>
 </div>
 
 <div class="container margin-top">
-  <input class="container__input" role="textbox" aria-label="Insert a value to reset" type="number" #inputVar/>
+  <input class="container__input" role="textbox" aria-label="Insert a value to reset" type="number" data-testid="input-value" #inputVar/>
 
-  <button class="container__btn container__btn--reset" (click)="reset(inputVar.value)">
+  <button class="container__btn container__btn--reset" data-testid="reset-btn" (click)="reset(inputVar.value)">
     reset
   </button>
 </div>
