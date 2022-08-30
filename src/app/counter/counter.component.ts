@@ -1,18 +1,26 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
   templateUrl: './counter.component.html',
   styleUrls: ['./counter.component.scss']
 })
-export class CounterComponent {
+export class CounterComponent implements OnChanges{
 
-  currentValue: number = 0;
+
+  @Input()
+  public startCount: number = 0;
 
   @Output()
-  countChange = new EventEmitter<number>();
+  public countChange = new EventEmitter<number>();
+
+  public currentValue: number = 0;
 
   constructor() { }
+
+  ngOnChanges(): void {
+    this.currentValue = this.startCount;
+  }
 
   increment(): void {
     this.currentValue++;
